@@ -14,6 +14,11 @@ TEST_CASE("reports error when current jumps abruptly") {
   int numOfCurReadings = sizeof(currentReadings) / sizeof(currentReadings[0]);
   REQUIRE(validateSensorreadings(currentReadings, numOfCurReadings,0.1 ) == 0);
 }
+TEST_CASE("Tests error when current jumps abruptly") {
+  double currentReadings[] = {1.0, 2, 3, 4};
+  int numOfCurReadings = sizeof(currentReadings) / sizeof(currentReadings[0]);
+  REQUIRE(validateSensorreadings(currentReadings, numOfCurReadings,0.1 ) == 0);
+}
 
 TEST_CASE("reports no error when current jumps abruptly") {
   double currentReadings[] = {0.0, 0.0, 0.0, 0.0};
