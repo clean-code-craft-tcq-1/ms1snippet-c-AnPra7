@@ -27,4 +27,4 @@ int validateSensorreadings(double* values, int numOfValues,double thresholdofJum
 
 // validateCurrentreadings() : function to Validating current value
 // returns integer
-int validateCurrentreadings(double* values, int numOfValues);
+int IfNotNullCheckForJump(double* values, int numOfValues,double thresholdofJump) 
