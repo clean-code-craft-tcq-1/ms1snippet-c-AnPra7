@@ -18,7 +18,7 @@ int IsThereSuddenJump(double value, double nextValue, double maxDelta);
 
 // validateSOCreadings() : function to Validating SOC value
 // returns integer
-int validateSOCreadings(double* values, int numOfValues);
+int validateSensorreadings(double* values, int numOfValues,double thresholdofJump);
 
 // validateCurrentreadings() : function to Validating current value
 // returns integer
