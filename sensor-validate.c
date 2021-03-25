@@ -1,5 +1,8 @@
 #include "sensor-validate.h"
 
+#define SOCthreshold 0.05
+#define Currentthreshold 0.1
+
 int IsThereSuddenJump(double value, double nextValue, double maxDelta) {
   if(nextValue - value > maxDelta) {
     return 0;
