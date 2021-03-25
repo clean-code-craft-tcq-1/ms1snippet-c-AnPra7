@@ -9,16 +9,32 @@ int IsThereSuddenJump(double value, double nextValue, double maxDelta) {
   return 1;
 }
 
-int validateSensorreadings(double* values, int numOfValues,double thresholdofJump) {
+int validateSensorreadings(double* values, int numOfValues,double thresholdofJump)
+{
+  int IsValidJump = 0;
+  int lastButOneIndex = numOfValues - 1;
+  
+  if(NULL ! = values)
+  {
+    IsValidJump = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
+  }
+  
+  return IsValidJump;
+  
+}
+
+int IfNotNullCheckForJump(double* values, int numOfValues,double thresholdofJump) {
   
   int lastButOneIndex = numOfValues - 1;
-  if(NULL != values)
-  {
+  
   for(int i = 0; i < lastButOneIndex; i++) {
+    
     if(!IsThereSuddenJump(values[i], values[i + 1], thresholdofJump)) {
+      
       return 0;
+    
     }
-  }
+  
   }
   return 1;
 }
