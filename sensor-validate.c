@@ -27,7 +27,7 @@ int validateSensorreadings(double* values, int numOfValues,double thresholdofJum
   if (NULL != values)
   {  
    /*Perform sensor validation individually */ 
-   retType = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
+   temp = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
   }
   /*Retruns TRUE if there is NULL pointer is sent*/
   return temp;
