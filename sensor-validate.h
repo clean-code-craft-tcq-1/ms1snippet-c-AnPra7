@@ -5,6 +5,7 @@
 ***     \brief       header file for sensor validation project file  
 /*****************************************************************************/
 
+#include <stdio.h>
 //   macros
 
 #define SOCthreshold 0.05
