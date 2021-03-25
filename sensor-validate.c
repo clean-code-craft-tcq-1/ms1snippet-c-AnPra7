@@ -7,16 +7,16 @@ int IsThereSuddenJump(double value, double nextValue, double maxDelta) {
   return 1;
 }
 
-int validateSOCreadings(double* values, int numOfValues) {
+int validateSensorreadings(double* values, int numOfValues,double thresholdofJump) {
   int lastButOneIndex = numOfValues - 1;
   for(int i = 0; i < lastButOneIndex; i++) {
-    if(!IsThereSuddenJump(values[i], values[i + 1], 0.05)) {
+    if(!IsThereSuddenJump(values[i], values[i + 1], thresholdofJump)) {
       return 0;
     }
   }
   return 1;
 }
-
+/*
 int validateCurrentreadings(double* values, int numOfValues) {
   int lastButOneIndex = numOfValues - 1;
   for(int i = 0; i < lastButOneIndex; i++) {
@@ -25,4 +25,4 @@ int validateCurrentreadings(double* values, int numOfValues) {
     }
   }
   return 1;
-}
+}*/
