@@ -11,26 +11,27 @@ int IsThereSuddenJump(double value, double nextValue, double maxDelta) {
 
 int validateSensorreadings(double* values, int numOfValues,double thresholdofJump)
 {
-  /*int IsValidJump = 0;
-  int lastButOneIndex = numOfValues - 1;
   
-  if(NULL ! = values)
+  int lastButOneIndex = numOfValues - 1;
+  int IsValidJump = 1;
+  
+  if(NULL != values)
   {
     IsValidJump = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
   }
   
-  return IsValidJump;*/
+  return IsValidJump;
   
-  int lastButOneIndex = numOfValues - 1; 
+  /*int lastButOneIndex = numOfValues - 1; 
   int temp = 1; 
   
   if (NULL != values)
   {  
    /*Perform sensor validation individually */ 
-   temp = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
+   //temp = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
   }
   /*Retruns TRUE if there is NULL pointer is sent*/
-  return temp;
+  //return temp;*/
   
 }
 
