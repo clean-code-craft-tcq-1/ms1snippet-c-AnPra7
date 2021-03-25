@@ -29,7 +29,7 @@ int validateSensorreadings(double* values, int numOfValues,double thresholdofJum
   {  
    /*Perform sensor validation individually */ 
    //temp = IfNotNullCheckForJump(values,lastButOneIndex,thresholdofJump);
-  }
+  //}
   /*Retruns TRUE if there is NULL pointer is sent*/
   //return temp;*/
   
