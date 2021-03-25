@@ -10,11 +10,15 @@ int IsThereSuddenJump(double value, double nextValue, double maxDelta) {
 }
 
 int validateSensorreadings(double* values, int numOfValues,double thresholdofJump) {
+  
   int lastButOneIndex = numOfValues - 1;
+  if(NULL != values)
+  {
   for(int i = 0; i < lastButOneIndex; i++) {
     if(!IsThereSuddenJump(values[i], values[i + 1], thresholdofJump)) {
       return 0;
     }
+  }
   }
   return 1;
 }
