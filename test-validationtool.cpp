@@ -12,7 +12,7 @@ TEST_CASE("reports error when soc jumps abruptly") {
 TEST_CASE("reports error when current jumps abruptly") {
   double currentReadings[] = {0.0, 0.02, 0.03, 0.33};
   int numOfCurReadings = sizeof(currentReadings) / sizeof(currentReadings[0]);
-  REQUIRE(validateSensorreadings(currentReadings, numOfCurReadings,0.4 ) == 0);
+  REQUIRE(validateSensorreadings(currentReadings, numOfCurReadings,0.1 ) == 1);
 }
 TEST_CASE("Tests error when current jumps abruptly") {
   double currentReadings[] = {1.0, 2, 3, 4};
