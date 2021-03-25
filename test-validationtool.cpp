@@ -15,13 +15,13 @@ TEST_CASE("reports error when current jumps abruptly") {
   REQUIRE(validateSensorreadings(currentReadings, numOfCurReadings,Currentthreshold ) == 1);
 }
 
-TEST_CASE("reports error when current jumps abruptly") {
+TEST_CASE("reports no error when current jumps abruptly") {
   double currentReadings[] = {0.0, 0.0, 0.0, 0.0};
   int numOfCurReadings = sizeof(currentReadings) / sizeof(currentReadings[0]);
   REQUIRE(validateSensorreadings(currentReadings, numOfCurReadings,Currentthreshold ) == 0);
 }
 
-TEST_CASE("reports error when soc jumps abruptly") {
+TEST_CASE("reports no error when soc jumps abruptly") {
   double socReadings[] = {0.0, 0.0, 0.0, 0.0};
   int numOfSocReadings = sizeof(socReadings) / sizeof(socReadings[0]);
   REQUIRE(validateSensorreadings(socReadings, numOfSocReadings,SOCthreshold ) == 0);
