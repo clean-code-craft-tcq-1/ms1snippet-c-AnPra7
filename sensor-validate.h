@@ -5,6 +5,10 @@
 ***     \brief       header file for sensor validation project file  
 /*****************************************************************************/
 
+//   macros
+
+#define SOCthreshold 0.05
+#define Currentthreshold 0.1
 /*****************************************************************************
 
                           Common Functions
