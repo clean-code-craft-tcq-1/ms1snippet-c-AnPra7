@@ -21,7 +21,7 @@ int validateSensorreadings(double* values, int numOfValues,double thresholdofJum
   }
   
   return IsValidJump;
-  
+}
   
 
 int IfNotNullCheckForJump(double* values, int numOfValues,double thresholdofJump) {
