@@ -26,17 +26,19 @@ int validateSensorreadings(double* values, int numOfValues,double thresholdofJum
 
 int IfNotNullCheckForJump(double* values, int numOfValues,double thresholdofJump) {
   
+  int IsValidTransition = 1;
+  
   int lastButOneIndex = numOfValues - 1;
   
   for(int i = 0; i < lastButOneIndex; i++) {
     
     if(!IsThereSuddenJump(values[i], values[i + 1], thresholdofJump)) {
       
-      return 0;
+      IsValidTransition = 0;
     
     }
   
   }
-  return 1;
+  return IsValidTransition;
 }
 
